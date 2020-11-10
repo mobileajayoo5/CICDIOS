@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import AppCenterCrashes
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var calculateButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func calculateButtonAction(sender: UIButton) {
+        MSCrashes.generateTestCrash()
+    }
 }
 
